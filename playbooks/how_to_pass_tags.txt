@@ -1,0 +1,3 @@
+ansible-playbook httpdbytags.yaml -t i-httpd
+
+ansible-playbook httpdbytags.yaml --list-tags

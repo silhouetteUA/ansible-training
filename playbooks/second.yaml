@@ -1,0 +1,7 @@
+---
+- name: "My second playbook"
+  hosts: localhost
+  
+  tasks:
+  - name: "Outupt HW"
+    debug: msg="Hello world, once again !"

@@ -1,0 +1,10 @@
+---
+- name: Thrird, multiple playes
+  hosts: localhost
+
+  tasks:
+  - name: Ping localhost
+    ping:
+
+  - name: make an output
+    debug: msg="this is a new output!"

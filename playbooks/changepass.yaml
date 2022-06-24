@@ -1,0 +1,9 @@
+---
+- name: change password for george user on remote host
+  hosts: testgroup
+  tasks:
+    - name: change password for 'george'
+      user:
+        name: george
+        update_password: always
+        password: "{{ passwordphrase|password_hash('sha512') }}"

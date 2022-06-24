@@ -1,0 +1,4 @@
+ansible-playbook --check httpbyvault.yaml --ask-vault-pass
+ansible-vault create httpbyvault.yaml
+ansible-vault view httpbyvault.yaml
+ansible-vault edit httpbyvault.yaml

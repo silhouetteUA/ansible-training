@@ -1,0 +1,7 @@
+---
+- name: "Check remote hosts connectivity under 'testgroup' group"
+  hosts: testgroup
+  
+  tasks:
+  - name: "Check connectivity"
+    ping:

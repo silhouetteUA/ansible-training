@@ -1,0 +1,10 @@
+---
+- name: crete a george user on remote host
+  hosts: testgroup
+  tasks:
+   - name: create user
+     user:
+      name: george
+      home: /home/george
+      shell: /bin/bash
+      

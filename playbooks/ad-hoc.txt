@@ -1,0 +1,32 @@
+ansible localhost -m ping
+ansible testgroup -m ping
+
+ansible testgroup -m file -a "path=/home/jay/adhocfile-txt state=touch mode=700"
+ansible testgroup -m file -a "path=/home/jay/adhocfile-txt state=absent"
+
+ansible testgroup -m copy -a "src=/etc/ansible/playbooks/somefile-txt dest=/home/jay/"
+
+ansible testgroup -m apt -a "name=ftp state=present"
+ansible testgroup -m apt -a "name=ftp state=absent"
+
+ansible testgroup -m service -a "name=httpd state=started enabled=yes"
+
+ansible testgroup -m shell -a "systemctl status apache2"
+
+
+Creating a user on remote clients
+# ansible all -m user -a "name=jsmith home=/home/jsmith shell=/bin/bash state=present"
+
+To add a user to a different group
+# ansible all -m user -a "name=jsmith group=scp"
+
+Deleting a user on remote clients
+# ansible all -m user -a "name=jsmith home=/home/jsmith shell=/bin/bash state=absent"
+OR
+# ansible all -m shell -a "userdel jsmith"
+
+Getting system information from remote clients
+# ansible all -m setup
+
+You can run commands on the remote host without a shell module e-g- reboot client1
+# ansible client1 -a "/sbin/reboot"

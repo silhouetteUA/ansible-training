@@ -1,0 +1,9 @@
+---
+ - name: change file permission on remote host
+   hosts: testgroup
+   
+   tasks:
+       - name: change permissions for file on the remote host
+         file: 
+          path: /tmp/somefile.txt
+          mode: a+xw

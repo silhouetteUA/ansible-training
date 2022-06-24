@@ -1,0 +1,6 @@
+---
+ - name: execute script at remote endpoint
+   hosts: testgroup
+   tasks:
+         - name: execute remote script
+           shell: "/tmp/testscript.sh"
